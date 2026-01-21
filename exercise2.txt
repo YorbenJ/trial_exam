@@ -1,0 +1,59 @@
+**Exercise 2:**
+
+	**UNF:**
+
+		DB(staffNo, dentistName, patientNo, patientName, apptDate, apptTime, surgerNo)
+
+	
+
+	**1NF:** 
+
+		staffNo, apptDate, apptTime als **primary key**
+
+		DB(**staffNo**, dentistName, patientNo, patientName, **apptDate**, **apptTime**, surgerNo)
+
+
+
+
+
+	**2NF:**
+
+		Geen enkele kolom mag bepaald worden door 1 deel van de **primary key**
+
+		DB(**staffNo**, patientNo, patientName, **apptDate**, **apptTime**)
+
+
+		Dentist(**staffNo,** dentistName)
+
+		Surgery_date(**staffNo, apptDate,** surgeryNo)
+
+
+
+	**3NF:**
+
+		Elke kolom die geen **primary key** is, zijn die volledig afhankelijk van de **primary key**?
+
+		**HINT: laat de primary keys kolommen vallen, en zie wat er overblijft, is dit afhankelijk van elkaar**
+
+
+
+		Patient(**patientNo**. patientName)
+
+		DB(**staffNo**, patientNo, **apptDate**, **apptTime**)
+
+		Dentist(**staffNo,** dentistName)
+
+		Surgery_date(**staffNo, apptDate,** surgeryNo)
+
+
+
+
+
+.		
+
+
+
+
+
+		
+
