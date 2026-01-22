@@ -1,0 +1,956 @@
+1)
+db.restaurants.find({}, { _id: 0, restaurant_id: 1, name: 1, borough: 1, cuisine: 1 })
+[
+  {
+    borough: 'Manhattan',
+    cuisine: 'Irish',
+    name: 'Dj Reynolds Pub And Restaurant',
+    restaurant_id: '30191841'
+  },
+  {
+    borough: 'Brooklyn',
+    cuisine: 'American',
+    name: 'Riviera Caterer',
+    restaurant_id: '40356018'
+  },
+  {
+    borough: 'Queens',
+    cuisine: 'Jewish/Kosher',
+    name: 'Tov Kosher Kitchen',
+    restaurant_id: '40356068'
+  },
+  {
+    borough: 'Staten Island',
+    cuisine: 'Jewish/Kosher',
+    name: 'Kosher Island',
+    restaurant_id: '40356442'
+  },
+  {
+    borough: 'Queens',
+    cuisine: 'American',
+    name: 'Brunos On The Boulevard',
+    restaurant_id: '40356151'
+  },
+  {
+    borough: 'Brooklyn',
+    cuisine: 'American',
+    name: 'Regina Caterers',
+    restaurant_id: '40356649'
+  },
+  {
+    borough: 'Brooklyn',
+    cuisine: 'Delicatessen',
+    name: "Wilken'S Fine Food",
+    restaurant_id: '40356483'
+  },
+  {
+    borough: 'Brooklyn',
+    cuisine: 'Ice Cream, Gelato, Yogurt, Ices',
+    name: 'Taste The Tropics Ice Cream',
+    restaurant_id: '40356731'
+  },
+  {
+    borough: 'Bronx',
+    cuisine: 'Bakery',
+    name: 'Morris Park Bake Shop',
+    restaurant_id: '30075445'
+  },
+  {
+    borough: 'Brooklyn',
+    cuisine: 'American',
+    name: 'C & C Catering Service',
+    restaurant_id: '40357437'
+  },
+  {
+    borough: 'Brooklyn',
+    cuisine: 'Chinese',
+    name: 'May May Kitchen',
+    restaurant_id: '40358429'
+  },
+  {
+    borough: 'Manhattan',
+    cuisine: 'American',
+    name: '1 East 66Th Street Kitchen',
+    restaurant_id: '40359480'
+  },
+  {
+    borough: 'Brooklyn',
+    cuisine: 'Jewish/Kosher',
+    name: 'Seuda Foods',
+    restaurant_id: '40360045'
+  },
+  {
+    borough: 'Bronx',
+    cuisine: 'American',
+    name: 'Wild Asia',
+    restaurant_id: '40357217'
+  },
+  {
+    borough: 'Brooklyn',
+    cuisine: 'Hamburgers',
+    name: "Wendy'S",
+    restaurant_id: '30112340'
+  },
+  {
+    borough: 'Manhattan',
+    cuisine: 'American',
+    name: 'Glorious Food',
+    restaurant_id: '40361521'
+  },
+  {
+    borough: 'Brooklyn',
+    cuisine: 'American',
+    name: 'The Movable Feast',
+    restaurant_id: '40361606'
+  },
+  {
+    borough: 'Queens',
+    cuisine: 'Delicatessen',
+    name: "Sal'S Deli",
+    restaurant_id: '40361618'
+  },
+  {
+    borough: 'Manhattan',
+    cuisine: 'Delicatessen',
+    name: "Bully'S Deli",
+    restaurant_id: '40361708'
+  },
+  {
+    borough: 'Queens',
+    cuisine: 'Delicatessen',
+    name: "Steve Chu'S Deli & Grocery",
+    restaurant_id: '40361998'
+  }
+]
+Type "it" for more
+
+2)
+db.restaurants.find({borough: 'Bronx'}).skip(5).limit(5)
+[
+  {
+    _id: ObjectId('6971e68e8a064deb7facfc59'),
+    address: {
+      building: '658',
+      coord: [ -73.81363999999999, 40.82941100000001 ],
+      street: 'Clarence Ave',
+      zipcode: '10465'
+    },
+    borough: 'Bronx',
+    cuisine: 'American',
+    grades: [
+      {
+        date: ISODate('2014-06-21T00:00:00.000Z'),
+        grade: 'A',
+        score: 5
+      },
+      {
+        date: ISODate('2012-07-11T00:00:00.000Z'),
+        grade: 'A',
+        score: 10
+      }
+    ],
+    name: 'Manhem Club',
+    restaurant_id: '40364363'
+  },
+  {
+    _id: ObjectId('6971e68e8a064deb7facfc6f'),
+    address: {
+      building: '2222',
+      coord: [ -73.84971759999999, 40.8304811 ],
+      street: 'Haviland Avenue',
+      zipcode: '10462'
+    },
+    borough: 'Bronx',
+    cuisine: 'American',
+    grades: [
+      {
+        date: ISODate('2014-12-18T00:00:00.000Z'),
+        grade: 'A',
+        score: 7
+      },
+      {
+        date: ISODate('2014-05-01T00:00:00.000Z'),
+        grade: 'B',
+        score: 17
+      },
+      {
+        date: ISODate('2013-03-14T00:00:00.000Z'),
+        grade: 'A',
+        score: 12
+      },
+      {
+        date: ISODate('2012-09-20T00:00:00.000Z'),
+        grade: 'A',
+        score: 9
+      },
+      {
+        date: ISODate('2012-02-08T00:00:00.000Z'),
+        grade: 'B',
+        score: 19
+      }
+    ],
+    name: 'The New Starling Athletic Club Of The Bronx',
+    restaurant_id: '40364956'
+  },
+  {
+    _id: ObjectId('6971e68e8a064deb7facfc87'),
+    address: {
+      building: '72',
+      coord: [ -73.92506, 40.8275556 ],
+      street: 'East  161 Street',
+      zipcode: '10451'
+    },
+    borough: 'Bronx',
+    cuisine: 'American',
+    grades: [
+      {
+        date: ISODate('2014-04-15T00:00:00.000Z'),
+        grade: 'A',
+        score: 9
+      },
+      {
+        date: ISODate('2013-11-14T00:00:00.000Z'),
+        grade: 'A',
+        score: 4
+      },
+      {
+        date: ISODate('2013-07-29T00:00:00.000Z'),
+        grade: 'A',
+        score: 10
+      },
+      {
+        date: ISODate('2012-12-31T00:00:00.000Z'),
+        grade: 'B',
+        score: 15
+      },
+      {
+        date: ISODate('2012-05-30T00:00:00.000Z'),
+        grade: 'A',
+        score: 13
+      },
+      {
+        date: ISODate('2012-01-09T00:00:00.000Z'),
+        grade: 'A',
+        score: 10
+      },
+      {
+        date: ISODate('2011-08-15T00:00:00.000Z'),
+        grade: 'C',
+        score: 37
+      }
+    ],
+    name: 'Yankee Tavern',
+    restaurant_id: '40365499'
+  },
+  {
+    _id: ObjectId('6971e68e8a064deb7facfc9e'),
+    address: {
+      building: '331',
+      coord: [ -73.87786539999999, 40.8724377 ],
+      street: 'East  204 Street',
+      zipcode: '10467'
+    },
+    borough: 'Bronx',
+    cuisine: 'Irish',
+    grades: [
+      {
+        date: ISODate('2014-08-26T00:00:00.000Z'),
+        grade: 'A',
+        score: 10
+      },
+      {
+        date: ISODate('2014-03-26T00:00:00.000Z'),
+        grade: 'B',
+        score: 23
+      },
+      {
+        date: ISODate('2013-09-11T00:00:00.000Z'),
+        grade: 'A',
+        score: 13
+      },
+      {
+        date: ISODate('2012-12-18T00:00:00.000Z'),
+        grade: 'B',
+        score: 27
+      },
+      {
+        date: ISODate('2011-10-20T00:00:00.000Z'),
+        grade: 'A',
+        score: 13
+      }
+    ],
+    name: 'Mcdwyers Pub',
+    restaurant_id: '40365893'
+  },
+  {
+    _id: ObjectId('6971e68e8a064deb7facfcb5'),
+    address: {
+      building: '5820',
+      coord: [ -73.9002615, 40.885186 ],
+      street: 'Broadway',
+      zipcode: '10463'
+    },
+    borough: 'Bronx',
+    cuisine: 'American',
+    grades: [
+      {
+        date: ISODate('2014-02-26T00:00:00.000Z'),
+        grade: 'A',
+        score: 5
+      },
+      {
+        date: ISODate('2013-10-09T00:00:00.000Z'),
+        grade: 'B',
+        score: 19
+      },
+      {
+        date: ISODate('2013-05-15T00:00:00.000Z'),
+        grade: 'A',
+        score: 9
+      },
+      {
+        date: ISODate('2012-11-20T00:00:00.000Z'),
+        grade: 'B',
+        score: 18
+      },
+      {
+        date: ISODate('2011-10-17T00:00:00.000Z'),
+        grade: 'A',
+        score: 10
+      },
+      {
+        date: ISODate('2011-06-22T00:00:00.000Z'),
+        grade: 'C',
+        score: 35
+      }
+    ],
+    name: 'The Punch Bowl',
+    restaurant_id: '40366497'
+  }
+]
+
+
+3)
+db.restaurants.find({ "grades.score": { $gt: 90 } }, {_id: 0, restaurant_id: 1, name:1, 'grades.score': 1} ).sort('name')
+[
+  {
+    grades: [
+      { score: 31 },
+      { score: 98 },
+      { score: 32 },
+      { score: 21 },
+      { score: 11 }
+    ],
+    name: 'Bella Napoli',
+    restaurant_id: '40393488'
+  },
+  {
+    grades: [
+      { score: 5 },
+      { score: 8 },
+      { score: 12 },
+      { score: 2 },
+      { score: 9 },
+      { score: 92 },
+      { score: 41 }
+    ],
+    name: 'Gandhi',
+    restaurant_id: '40381295'
+  },
+  {
+    grades: [
+      { score: 11 },
+      { score: 131 },
+      { score: 11 },
+      { score: 25 },
+      { score: 11 },
+      { score: 13 }
+    ],
+    name: "Murals On 54/Randolphs'S",
+    restaurant_id: '40372466'
+  }
+]
+
+4)
+db.restaurants.find({cuisine: {$ne: 'American'}, 'grades.score': {$gt: 70}, 'address.coord.0': {$lt: -65.754168} }, {_id: 0, name: 1, 'grades.score':1, 'address.coord':1})
+[
+  {
+    address: { coord: [ -73.9864626, 40.7266739 ] },
+    grades: [
+      { score: 5 },
+      { score: 8 },
+      { score: 12 },
+      { score: 2 },
+      { score: 9 },
+      { score: 92 },
+      { score: 41 }
+    ],
+    name: 'Gandhi'
+  },
+  {
+    address: { coord: [ -73.984758, 40.7457939 ] },
+    grades: [
+      { score: 31 },
+      { score: 98 },
+      { score: 32 },
+      { score: 21 },
+      { score: 11 }
+    ],
+    name: 'Bella Napoli'
+  },
+  {
+    address: { coord: [ -73.9243061, 40.8276297 ] },
+    grades: [
+      { score: 10 },
+      { score: 6 },
+      { score: 25 },
+      { score: 12 },
+      { score: 12 },
+      { score: 14 },
+      { score: 26 },
+      { score: 76 }
+    ],
+    name: 'El Molino Rojo Restaurant'
+  },
+  {
+    address: { coord: [ -73.94610279999999, 40.7137587 ] },
+    grades: [
+      { score: 10 },
+      { score: 10 },
+      { score: 13 },
+      { score: 18 },
+      { score: 9 },
+      { score: 8 },
+      { score: 77 }
+    ],
+    name: 'Fortunato Bros Cafe & Bakery'
+  },
+  {
+    address: { coord: [ -73.9772294, 40.7527262 ] },
+    grades: [
+      { score: 20 },
+      { score: 14 },
+      { score: 13 },
+      { score: 76 },
+      { score: 12 }
+    ],
+    name: 'Two Boots Grand Central'
+  }
+]
+
+5)
+db.restaurants.find({borough: 'Bronx', $or: [{cuisine: 'American'},{cuisine: 'Chinese'}]} , {_id: 0, name: 1, borough: 1, cuisine: 1} ).sort('cuisine')
+[
+  {
+    borough: 'Bronx',
+    cuisine: 'American',
+    name: 'Glen Roy Bar And Grill'
+  },
+  {
+    borough: 'Bronx',
+    cuisine: 'American',
+    name: "P.J. Brady'S Tavern"
+  },
+  {
+    borough: 'Bronx',
+    cuisine: 'American',
+    name: 'City Island Diner /Snug Bar'
+  },
+  {
+    borough: 'Bronx',
+    cuisine: 'American',
+    name: 'New Capital Restaurant'
+  },
+  { borough: 'Bronx', cuisine: 'American', name: "Cafe Lou'S" },
+  {
+    borough: 'Bronx',
+    cuisine: 'American',
+    name: 'Throgs Neck Clipper'
+  },
+  { borough: 'Bronx', cuisine: 'American', name: 'Casa Promesa' },
+  { borough: 'Bronx', cuisine: 'American', name: "Mr Mcgoo'S" },
+  { borough: 'Bronx', cuisine: 'American', name: 'Archer Sports Bar' },
+  { borough: 'Bronx', cuisine: 'American', name: 'An Beal Bocht Cafe' },
+  {
+    borough: 'Bronx',
+    cuisine: 'American',
+    name: 'Bedford Cafe & Restaurant'
+  },
+  { borough: 'Bronx', cuisine: 'American', name: 'Keenans' },
+  {
+    borough: 'Bronx',
+    cuisine: 'American',
+    name: 'Fordham University - Mcginley Center'
+  },
+  { borough: 'Bronx', cuisine: 'American', name: 'Wild Asia' },
+  { borough: 'Bronx', cuisine: 'American', name: "Louie'Sdale Diner" },
+  { borough: 'Bronx', cuisine: 'American', name: 'Bowler Land' },
+  {
+    borough: 'Bronx',
+    cuisine: 'American',
+    name: 'Fordham University/Mcginley Center/Ramskeller Kitchen'
+  },
+  { borough: 'Bronx', cuisine: 'American', name: 'Park Billiards' },
+  { borough: 'Bronx', cuisine: 'American', name: "Jimmy Ryan'S" },
+  { borough: 'Bronx', cuisine: 'American', name: 'Nonis Coffee Shop' }
+]
+Type "it" for more
+
+6)
+db.restaurants.find({ $nor: [ { borough: "Staten Island" }, { borough: "Queens" }, { borough: "Bronx" }, { borough: "Brooklyn" } ] }, {_id:0, restaurant_id:1, name:1, borough:1, cuisine: 1}) 
+[
+  {
+    borough: 'Manhattan',
+    cuisine: 'Irish',
+    name: 'Dj Reynolds Pub And Restaurant',
+    restaurant_id: '30191841'
+  },
+  {
+    borough: 'Manhattan',
+    cuisine: 'American',
+    name: '1 East 66Th Street Kitchen',
+    restaurant_id: '40359480'
+  },
+  {
+    borough: 'Manhattan',
+    cuisine: 'American',
+    name: 'Glorious Food',
+    restaurant_id: '40361521'
+  },
+  {
+    borough: 'Manhattan',
+    cuisine: 'Delicatessen',
+    name: "Bully'S Deli",
+    restaurant_id: '40361708'
+  },
+  {
+    borough: 'Manhattan',
+    cuisine: 'Chicken',
+    name: "Harriet'S Kitchen",
+    restaurant_id: '40362098'
+  },
+  {
+    borough: 'Manhattan',
+    cuisine: 'Turkish',
+    name: 'The Country Cafe',
+    restaurant_id: '40362715'
+  },
+  {
+    borough: 'Manhattan',
+    cuisine: 'American',
+    name: 'Angelika Film Center',
+    restaurant_id: '40362274'
+  },
+  {
+    borough: 'Manhattan',
+    cuisine: 'American',
+    name: 'P & S Deli Grocery',
+    restaurant_id: '40362264'
+  },
+  {
+    borough: 'Manhattan',
+    cuisine: 'American',
+    name: 'Downtown Deli',
+    restaurant_id: '40363021'
+  },
+  {
+    borough: 'Manhattan',
+    cuisine: 'American',
+    name: 'Cafe Metro',
+    restaurant_id: '40363298'
+  },
+  {
+    borough: 'Manhattan',
+    cuisine: 'Sandwiches/Salads/Mixed Buffet',
+    name: 'Lexler Deli',
+    restaurant_id: '40363426'
+  },
+  {
+    borough: 'Manhattan',
+    cuisine: 'Bakery',
+    name: "Olive'S",
+    restaurant_id: '40363151'
+  },
+  {
+    borough: 'Manhattan',
+    cuisine: 'Pizza',
+    name: "Domino'S Pizza",
+    restaurant_id: '40363644'
+  },
+  {
+    borough: 'Manhattan',
+    cuisine: 'Continental',
+    name: "Lorenzo & Maria'S",
+    restaurant_id: '40363630'
+  },
+  {
+    borough: 'Manhattan',
+    cuisine: 'American',
+    name: 'Spoon Bread Catering',
+    restaurant_id: '40364179'
+  },
+  {
+    borough: 'Manhattan',
+    cuisine: 'Pizza',
+    name: "Domino'S Pizza",
+    restaurant_id: '40363945'
+  },
+  {
+    borough: 'Manhattan',
+    cuisine: 'American',
+    name: 'Berkely',
+    restaurant_id: '40363685'
+  },
+  {
+    borough: 'Manhattan',
+    cuisine: 'American',
+    name: 'Palm Restaurant',
+    restaurant_id: '40364355'
+  },
+  {
+    borough: 'Manhattan',
+    cuisine: 'American',
+    name: 'Metropolitan Club',
+    restaurant_id: '40364347'
+  },
+  {
+    borough: 'Manhattan',
+    cuisine: 'American',
+    name: '21 Club',
+    restaurant_id: '40364362'
+  }
+]
+Type "it" for more
+
+7)
+db.restaurants.find({ grades: { $not: { $elemMatch: { score: { $gt: 10 } } } } }, { _id: 0, restaurant_id: 1, name: 1, borough: 1, cuisine: 1, "grades.score": 1 }).sort({ restaurrestaurant_id: 1 })
+... 
+[
+  {
+    borough: 'Brooklyn',
+    cuisine: 'American',
+    grades: [ { score: 5 }, { score: 2 }, { score: 5 }, { score: 2 } ],
+    name: 'C & C Catering Service',
+    restaurant_id: '40357437'
+  },
+  {
+    borough: 'Manhattan',
+    cuisine: 'American',
+    grades: [ { score: 3 }, { score: 4 }, { score: 6 }, { score: 0 } ],
+    name: '1 East 66Th Street Kitchen',
+    restaurant_id: '40359480'
+  },
+  {
+    borough: 'Brooklyn',
+    cuisine: 'Delicatessen',
+    grades: [ { score: 4 }, { score: 3 }, { score: 10 } ],
+    name: 'Nordic Delicacies',
+    restaurant_id: '40361390'
+  },
+  {
+    borough: 'Brooklyn',
+    cuisine: 'Hamburgers',
+    grades: [ { score: 8 }, { score: 8 }, { score: 7 }, { score: 2 } ],
+    name: 'White Castle',
+    restaurant_id: '40362344'
+  },
+  {
+    borough: 'Brooklyn',
+    cuisine: 'American',
+    grades: [ { score: 0 }, { score: 3 }, { score: 10 } ],
+    name: "Sonny'S Heros",
+    restaurant_id: '40363744'
+  },
+  {
+    borough: 'Bronx',
+    cuisine: 'American',
+    grades: [ { score: 5 }, { score: 10 } ],
+    name: 'Manhem Club',
+    restaurant_id: '40364363'
+  },
+  {
+    borough: 'Staten Island',
+    cuisine: 'American',
+    grades: [ { score: 10 }, { score: 4 }, { score: 8 } ],
+    name: 'Great Kills Yacht Club',
+    restaurant_id: '40364610'
+  },
+  {
+    borough: 'Manhattan',
+    cuisine: 'American',
+    grades: [ { score: 10 }, { score: 3 }, { score: 10 }, { score: 9 } ],
+    name: 'Serendipity 3',
+    restaurant_id: '40364863'
+  },
+  {
+    borough: 'Manhattan',
+    cuisine: 'American',
+    grades: [
+      { score: 2 },
+      { score: 7 },
+      { score: 2 },
+      { score: 6 },
+      { score: 5 }
+    ],
+    name: 'White Horse Tavern',
+    restaurant_id: '40364958'
+  },
+  {
+    borough: 'Manhattan',
+    cuisine: 'Irish',
+    grades: [ { score: 2 }, { score: 7 }, { score: 7 }, { score: 9 } ],
+    name: "Dorrian'S Red Hand Restaurant",
+    restaurant_id: '40365239'
+  },
+  {
+    borough: 'Manhattan',
+    cuisine: 'Mexican',
+    grades: [ { score: 5 }, { score: 2 }, { score: 10 }, { score: 10 } ],
+    name: 'Mexico Lindo Restaurant',
+    restaurant_id: '40367038'
+  },
+  {
+    borough: 'Brooklyn',
+    cuisine: 'Greek',
+    grades: [
+      { score: 9 },
+      { score: 10 },
+      { score: 10 },
+      { score: 2 },
+      { score: 7 }
+    ],
+    name: 'El Greco Diner',
+    restaurant_id: '40367795'
+  },
+  {
+    borough: 'Bronx',
+    cuisine: 'Not Listed/Not Applicable',
+    grades: [ { score: 5 }, { score: 2 }, { score: 2 }, { score: 10 } ],
+    name: "The Lark'S Nest",
+    restaurant_id: '40367946'
+  },
+  {
+    borough: 'Bronx',
+    cuisine: 'Café/Coffee/Tea',
+    grades: [ { score: 8 }, { score: 9 }, { score: 8 } ],
+    name: 'Terrace Cafe',
+    restaurant_id: '40368018'
+  },
+  {
+    borough: 'Bronx',
+    cuisine: 'African',
+    grades: [ { score: 8 }, { score: 6 }, { score: 0 }, { score: 0 } ],
+    name: 'African Terrace',
+    restaurant_id: '40368021'
+  },
+  {
+    borough: 'Bronx',
+    cuisine: 'American',
+    grades: [ { score: 5 }, { score: 3 }, { score: 4 }, { score: 9 } ],
+    name: 'African Market (Baboon Cafe)',
+    restaurant_id: '40368026'
+  },
+  {
+    borough: 'Staten Island',
+    cuisine: 'Italian',
+    grades: [ { score: 10 }, { score: 3 }, { score: 6 }, { score: 10 } ],
+    name: 'Roadhouse Restaurant',
+    restaurant_id: '40368034'
+  },
+  {
+    borough: 'Manhattan',
+    cuisine: 'French',
+    grades: [ { score: 9 }, { score: 2 }, { score: 8 } ],
+    name: 'Pergola Des Artistes',
+    restaurant_id: '40369139'
+  },
+  {
+    borough: 'Brooklyn',
+    cuisine: 'Hamburgers',
+    grades: [ { score: 10 }, { score: 7 }, { score: 5 }, { score: 10 } ],
+    name: "Mcdonald'S",
+    restaurant_id: '40369535'
+  },
+  {
+    borough: 'Brooklyn',
+    cuisine: 'American',
+    grades: [ { score: 10 }, { score: 8 } ],
+    name: 'The River Cafe',
+    restaurant_id: '40369608'
+  }
+]
+Type "it" for more
+
+8)
+db.restaurants.find({ grades: { $eq: {date: ISODate('2014-08-11T00:00:00Z'), grade: 'A', score: 11}}}, {_id: 0, restaurant_id: 1, name: 1, grades: 1})  
+[
+  {
+    grades: [
+      {
+        date: ISODate('2014-08-11T00:00:00.000Z'),
+        grade: 'A',
+        score: 11
+      },
+      {
+        date: ISODate('2013-12-10T00:00:00.000Z'),
+        grade: 'A',
+        score: 9
+      },
+      {
+        date: ISODate('2013-06-10T00:00:00.000Z'),
+        grade: 'A',
+        score: 12
+      },
+      {
+        date: ISODate('2012-06-08T00:00:00.000Z'),
+        grade: 'A',
+        score: 13
+      },
+      {
+        date: ISODate('2012-01-25T00:00:00.000Z'),
+        grade: 'A',
+        score: 8
+      },
+      {
+        date: ISODate('2011-09-13T00:00:00.000Z'),
+        grade: 'A',
+        score: 12
+      }
+    ],
+    name: 'Don Filippo Restaurant',
+    restaurant_id: '40372417'
+  }
+]
+
+8)
+db.restaurants.find({}, {_id:0 , restaurant_id: 1, name: 1, cuisine: 1, borough: 1}).sort({cuisine: 1, borough: -1})
+[
+  {
+    borough: 'Manhattan',
+    cuisine: 'Afghan',
+    name: 'Khyber Pass',
+    restaurant_id: '40589545'
+  },
+  {
+    borough: 'Manhattan',
+    cuisine: 'Afghan',
+    name: 'Afghan Kebab House',
+    restaurant_id: '40552806'
+  },
+  {
+    borough: 'Manhattan',
+    cuisine: 'Afghan',
+    name: 'Ariana Kebab House',
+    restaurant_id: '40868400'
+  },
+  {
+    borough: 'Manhattan',
+    cuisine: 'Afghan',
+    name: 'Afghan Kebab House #1',
+    restaurant_id: '40616799'
+  },
+  {
+    borough: 'Queens',
+    cuisine: 'African',
+    name: 'Africana Restaurant',
+    restaurant_id: '40798504'
+  },
+  {
+    borough: 'Brooklyn',
+    cuisine: 'African',
+    name: 'Madiba',
+    restaurant_id: '40684161'
+  },
+  {
+    borough: 'Bronx',
+    cuisine: 'African',
+    name: 'Ebe Ye Yie African Restaurant',
+    restaurant_id: '40832718'
+  },
+  {
+    borough: 'Bronx',
+    cuisine: 'African',
+    name: 'African Terrace',
+    restaurant_id: '40368021'
+  },
+  {
+    borough: 'Staten Island',
+    cuisine: 'American',
+    name: 'Union Hall',
+    restaurant_id: '40378822'
+  },
+  {
+    borough: 'Staten Island',
+    cuisine: 'American',
+    name: "Labetti'S Post # 2159",
+    restaurant_id: '40365022'
+  },
+  {
+    borough: 'Staten Island',
+    cuisine: 'American',
+    name: 'Grand Plaza',
+    restaurant_id: '40528073'
+  },
+  {
+    borough: 'Staten Island',
+    cuisine: 'American',
+    name: 'South Shore Swimming Club',
+    restaurant_id: '40365120'
+  },
+  {
+    borough: 'Staten Island',
+    cuisine: 'American',
+    name: 'Rosebank Tavern',
+    restaurant_id: '40387746'
+  },
+  {
+    borough: 'Staten Island',
+    cuisine: 'American',
+    name: 'Perkins Family Restaurant & Bakery',
+    restaurant_id: '40528983'
+  },
+  {
+    borough: 'Staten Island',
+    cuisine: 'American',
+    name: 'Boston Market',
+    restaurant_id: '40786914'
+  },
+  {
+    borough: 'Staten Island',
+    cuisine: 'American',
+    name: 'Campus Center Cafeteria',
+    restaurant_id: '40516509'
+  },
+  {
+    borough: 'Staten Island',
+    cuisine: 'American',
+    name: 'Boston Market',
+    restaurant_id: '40786923'
+  },
+  {
+    borough: 'Staten Island',
+    cuisine: 'American',
+    name: 'Boston Market',
+    restaurant_id: '40786924'
+  },
+  {
+    borough: 'Staten Island',
+    cuisine: 'American',
+    name: "Rab'S Country Lane",
+    restaurant_id: '40402222'
+  },
+  {
+    borough: 'Staten Island',
+    cuisine: 'American',
+    name: 'Island Chateau',
+    restaurant_id: '40402742'
+  }
+]
+Type "it" for more
+
+9)
+Restaurant> db.restaurants.find({'address.street' : {$exists: true}}).count()
+3772
+Restaurant> db.restaurants.find().count()
+3772
+
